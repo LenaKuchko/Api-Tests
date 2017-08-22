@@ -1,5 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<form asp-controller="Home" asp-action="GetLocation">
+    <div class="form-group">
+        <label for="search" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input name="search" class="form-control" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default">Get coords</button>
+</form>
 
 @Html.ActionLink("View Location", "GetLocation")

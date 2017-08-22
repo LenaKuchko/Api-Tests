@@ -13,10 +13,9 @@ namespace apitesting.Controllers
         {
             return View();
         }
-        public IActionResult GetLocation()
+        public IActionResult GetLocation(string search)
         {
-            string test = "test";
-            var location = Location.GetLocation(test);
+            var location = Location.GetLocation(search);
             return View(location);
         }
         public IActionResult About()
